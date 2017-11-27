@@ -1,0 +1,7 @@
+{
+  "name": "Dialogflow chat-bot workshop",
+  "description": "Dialogflow chat-bot workshop",
+  "repository": "https://github.com/JakubChmiel/chat-bot-workshop",
+  "logo": "http://xvir.github.io/img/apiai.png",
+  "keywords": ["api.ai", "natural language", "dialogflow"]
+}

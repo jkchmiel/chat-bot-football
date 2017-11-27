@@ -1,0 +1,25 @@
+{
+     "result": {
+         "fulfillment": {
+         },
+         "metadata":{
+         },
+         "contexts": [],
+         "parameters": {
+         },
+         "speech": "",
+         "resolvedQuery": "this is sample question asked",
+         "action": "",
+         "actionIncomplete": false,
+         "score": 1.0,
+         "source": "agent"
+     },
+     "timestamp": "2017-11-24T13:14:10.694Z",
+     "sessionId": "xxxxxxxxxxxxxxxxxxxxxxx",
+     "id": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+     "lang": "en",
+     "status": {
+         "code": 200,
+         "errorType": "success"
+     }
+}
