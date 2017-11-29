@@ -8,7 +8,7 @@
     "action": "find_results",
     "actionIncomplete": false,
     "parameters": {
-      "match_place": "",
+      "match_place": "home",
       "result": "wins",
       "team": "Barcelona"
     },
