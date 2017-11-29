@@ -106,3 +106,5 @@ venv.bak/
 .mypy_cache/
 
 .idea
+knowledge/data/source/*.csv
+knowledge/data/arch

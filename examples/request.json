@@ -1,25 +1,39 @@
 {
-     "result": {
-         "fulfillment": {
-         },
-         "metadata":{
-         },
-         "contexts": [],
-         "parameters": {
-         },
-         "speech": "",
-         "resolvedQuery": "this is sample question asked",
-         "action": "",
-         "actionIncomplete": false,
-         "score": 1.0,
-         "source": "agent"
-     },
-     "timestamp": "2017-11-24T13:14:10.694Z",
-     "sessionId": "xxxxxxxxxxxxxxxxxxxxxxx",
-     "id": "xxxxxxxxxxxxxxxxxxxxxxxxx",
-     "lang": "en",
-     "status": {
-         "code": 200,
-         "errorType": "success"
-     }
+  "id": "8d82de57-479f-4899-b4d6-3c65ed3e6a7e",
+  "timestamp": "2017-11-29T09:13:12.833Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "How often Barcelona wins",
+    "action": "find_results",
+    "actionIncomplete": false,
+    "parameters": {
+      "match_place": "",
+      "result": "wins",
+      "team": "Barcelona"
+    },
+    "contexts": [],
+    "metadata": {
+      "intentId": "27ce4356-ff55-496e-b9c7-7cf7c9bdcfcd",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "frequent_result"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success",
+    "webhookTimedOut": false
+  },
+  "sessionId": "93c83c2f-35dc-4999-9d0c-03e4ccb09ee1"
 }

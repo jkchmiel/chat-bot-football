@@ -1,10 +1,20 @@
-from DialogFlowResponse import DialogFlowResponse
-from datetime import datetime
+from response.DialogFlowResponse import DialogFlowResponse
+from answer_generator import GenerateAnswer
+
+
+def read_request_info(req):
+    request_info = dict()
+    request_info["action"] = req.get("result").get("action")
+    request_info["team"] = req.get("result").get("parameters").get("team", '')
+    request_info["division"] = req.get("result").get("parameters").get("division", '')
+    request_info["match_place"] = req.get("result").get("parameters").get("match_place", '')
+    request_info["result"] = req.get("result").get("parameters").get("result", '')
+    return request_info
 
 
 def prepare_response(req):
-    resolved_query = req["result"]["resolvedQuery"]
-    text = "{} | Test webhook response: {}".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), resolved_query)
+    request_info = read_request_info(req)
+    text = GenerateAnswer.generate_answer(request_info)
     return DialogFlowResponse().set_text(text).to_json()
 
 
