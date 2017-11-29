@@ -1,5 +1,5 @@
 ANSWER_TEMPLATES_MAPPING = {
-    "find_top_team": "The top team in {country} is {team}",
+    "find_top_team": "The top {match_place} team in {country} is {team}",
     "find_results": "{team} has {value} {match_place} {result}"
 }
 
@@ -23,6 +23,7 @@ MAP_RESULT_TO_COLUMN = {
 
 
 def find_top_team(data, request_info):
+    print request_info
     filtered_data = data[data["Div"] == request_info.get("division")]
 
     if request_info.get("match_place") == "home":
@@ -31,8 +32,8 @@ def find_top_team(data, request_info):
         final_dict = filtered_data.loc[filtered_data['away_points'].idxmax()].to_dict()
     else:
         final_dict = filtered_data.loc[filtered_data['points'].idxmax()].to_dict()
-
-    return ANSWER_TEMPLATES_MAPPING[request_info.get("action")].format(**final_dict)
+    request_info.update(final_dict)
+    return ANSWER_TEMPLATES_MAPPING[request_info.get("action")].format(**request_info)
 
 
 def find_results(data, request_info):
